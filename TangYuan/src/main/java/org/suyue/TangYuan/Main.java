@@ -99,6 +99,19 @@ public class Main implements SuYueBotMod {
                 }
             }
 
+            //手动IT之家
+            if (messageStr.indexOf("来点IT之家") >= 0) {
+                String msg = null;
+                try {
+                    msg = ITHomeGetter.getSuitItem(ITHomeGetter.ithomeRssUrl,ITHomeGetter.ithomeKeywords()).getTitle()+" "+ITHomeGetter.getSuitItem(ITHomeGetter.ithomeRssUrl,ITHomeGetter.ithomeKeywords()).getLink();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                } catch (FeedException e) {
+                    throw new RuntimeException(e);
+                }
+                event.getGroup().sendMessage(new PlainText(msg));
+            }
+
             //米米米米米米米
             if (messageStr.indexOf("小米") >= 0&&discussionCount>=0) {
                 event.getGroup().sendMessage(randomMiMsg());

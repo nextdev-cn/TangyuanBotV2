@@ -19,9 +19,6 @@
             </plugin>
         </plugins>
     </build>
-    <modules>
-        <module>TangYuan</module>
-    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -62,6 +59,16 @@
             <groupId>com.rometools</groupId>
             <artifactId>rome</artifactId>
             <version>1.14.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.5</version>
         </dependency>
 
     </dependencies>
